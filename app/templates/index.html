@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/main.css">
+    <title>Open Meals Api Demo</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h3>Open Meal Api</h3>
+        </div>
+        <div class="nav-items">
+            <a href="#">Add A meal</a>
+        </div>
+        
+    </header>
+    <section class="meals">
+            
+        {% for meal in meals %}
+            <div class="box">
+                <h3>{{meal.name}}</h3>
+                <div class="box-details">
+                    <p>price: {{meal.price}}</p>
+                    <br>
+                    <br>
+                    <a href="#" class="detail-btn">View Details</a>
+                </div>
+            </div>
+        {% endfor %}
+            
+    </section>
+    <script src="static/index.js">
+
+    </script>
+</body>
+</html>
